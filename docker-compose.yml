@@ -2,11 +2,11 @@ version: '3'
 
 services:
    db:
-      image: sqlalchemy/mysql
+      image: lec00q/mysql:latest
       restart: always
    web:
       build: .
-      command: flask run 0.0.0.0:5080
+      command: flask run
       volumes:
         - .:/redirector
       ports:
